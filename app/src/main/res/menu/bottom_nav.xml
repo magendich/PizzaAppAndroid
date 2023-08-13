@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Меню"
+        android:icon="@drawable/baseline_local_pizza_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Профиль"
+        android:icon="@drawable/baseline_person_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Контакты"
+        android:icon="@drawable/baseline_location_on_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Корзина"
+        android:icon="@drawable/baseline_shopping_basket_24"/>
 </menu>
