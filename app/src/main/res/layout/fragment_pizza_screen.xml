@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.PizzaScreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/pizzaImagePC"
+            android:layout_width="411dp"
+            android:layout_height="347dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/baseline_local_pizza_24" />
+
+        <TextView
+            android:id="@+id/pizzaTitlePC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pizzaImagePC" />
+
+        <TextView
+            android:id="@+id/pizzaDescriptionPC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/pizzaTitlePC"
+            app:layout_constraintTop_toBottomOf="@+id/pizzaTitlePC" />
+
+        <TextView
+            android:id="@+id/pizzaIngredientsPC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Ingredients"
+            android:textColor="#6F6A6A"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/pizzaDescriptionPC"
+            app:layout_constraintStart_toStartOf="@+id/pizzaDescriptionPC"
+            app:layout_constraintTop_toBottomOf="@+id/pizzaDescriptionPC" />
+
+        <Button
+            android:id="@+id/addToCartBtnPC"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="90dp"
+            android:text="Добавить в корзину"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/pizzaIngredientsPC"
+            app:layout_constraintStart_toStartOf="@+id/pizzaIngredientsPC" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

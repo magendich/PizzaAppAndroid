@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.Contacts">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTint="@color/white">
+
+        <Button
+            android:id="@+id/phoneCallBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#FFCCBC"
+            android:text="Позвонить"
+            android:textAllCaps="false"
+            android:textColor="#D50000"
+            app:cornerRadius="12dp"
+            app:layout_constraintStart_toStartOf="@+id/pizzeriasOnMapBtn"
+            app:layout_constraintTop_toBottomOf="@+id/pizzeriasOnMapBtn" />
+
+        <Button
+            android:id="@+id/writiChatBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#FFCCBC"
+            android:text="Написать в чат"
+            android:textAllCaps="false"
+            android:textColor="#D50000"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/pizzeriasOnMapBtn"
+            app:layout_constraintTop_toBottomOf="@+id/pizzeriasOnMapBtn" />
+
+        <ImageView
+            android:id="@+id/pointOnMapImg"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/points_on_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/pizzeriasOnMapBtn"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="-80dp"
+            android:layout_marginEnd="45dp"
+            android:backgroundTint="#FF1100"
+            android:text="Пиццерии на карте"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pointOnMapImg" />
+
+        <ImageButton
+            android:id="@+id/vkLinkBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/vk"
+            app:layout_constraintEnd_toEndOf="@+id/phoneCallBtn"
+            app:layout_constraintStart_toStartOf="@+id/phoneCallBtn"
+            app:layout_constraintTop_toBottomOf="@+id/phoneCallBtn" />
+
+        <ImageButton
+            android:id="@+id/youtubeLinkBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/youtube"
+            app:layout_constraintEnd_toEndOf="@+id/writiChatBtn"
+            app:layout_constraintStart_toStartOf="@+id/writiChatBtn"
+            app:layout_constraintTop_toBottomOf="@+id/writiChatBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
