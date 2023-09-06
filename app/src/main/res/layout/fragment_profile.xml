@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#000000"
+    tools:context=".presentation.fragment.Profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/indicateNumberBtnAcc"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="50dp"
+            android:backgroundTint="#FF1100"
+            android:text="Указать телефон"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greetingsInfoTVAcc" />
+
+        <TextView
+            android:id="@+id/greetingsTVAcc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Давайте знакомиться!"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/greetingsInfoTVAcc"
+            app:layout_constraintStart_toStartOf="@+id/greetingsInfoTVAcc"
+            app:layout_constraintTop_toBottomOf="@+id/imgAcc" />
+
+        <TextView
+            android:id="@+id/greetingsInfoTVAcc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Подарим подарок на день рождения, сохраним адрес доставки и расскажем об акциях"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/indicateNumberBtnAcc"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/indicateNumberBtnAcc"
+            app:layout_constraintTop_toBottomOf="@+id/greetingsTVAcc" />
+
+        <ImageView
+            android:id="@+id/imgAcc"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:src="@drawable/accaunt_greetings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/accaunt_greetings" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
