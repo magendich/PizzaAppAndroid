@@ -1,11 +1,9 @@
-package com.example.pizzaapp.data.mapper
+package com.example.pizzaapp.data.model
 
-import com.example.pizzaapp.domain.model.PizzaModel
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class ProductDto(
-
     @SerializedName("title")
     val title: String,
 
@@ -20,15 +18,4 @@ data class ProductDto(
 
     @SerializedName("ingridients")
     val ingredients: List<String>
-
-): Serializable {
-    fun toDomain(): PizzaModel {
-        return PizzaModel(
-            title = title,
-            price = price,
-            img = img,
-            description = description,
-            ingredients = ingredients
-        )
-    }
-}
+): Serializable

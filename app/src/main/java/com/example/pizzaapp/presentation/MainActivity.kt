@@ -2,15 +2,13 @@ package com.example.pizzaapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import com.example.pizzaapp.R
 import com.example.pizzaapp.databinding.ActivityMainBinding
-import com.example.pizzaapp.presentation.fragment.Cart
-import com.example.pizzaapp.presentation.fragment.Contacts
-import com.example.pizzaapp.presentation.fragment.Menu
-import com.example.pizzaapp.presentation.fragment.Profile
-import com.example.pizzaapp.presentation.viewmodel.PizzaViewModel
+import com.example.pizzaapp.presentation.fragment.CartFragment
+import com.example.pizzaapp.presentation.fragment.ContactsFragment
+import com.example.pizzaapp.presentation.fragment.CatalogFragment
+import com.example.pizzaapp.presentation.fragment.ProfileFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         _mainActivityUI = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainActivityUI.root)
 
-        replaceFragment(Menu())
+        replaceFragment(CatalogFragment())
         fragmentNavigation()
     }
 
@@ -33,10 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         mainActivityUI.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.menuBN -> replaceFragment(Menu())
-                R.id.profileBN -> replaceFragment(Profile())
-                R.id.contactsBN -> replaceFragment(Contacts())
-                R.id.cartBN -> replaceFragment(Cart())
+                R.id.menuBN -> replaceFragment(CatalogFragment())
+                R.id.profileBN -> replaceFragment(ProfileFragment())
+                R.id.contactsBN -> replaceFragment(ContactsFragment())
+                R.id.cartBN -> replaceFragment(CartFragment())
             }
             true
         }
