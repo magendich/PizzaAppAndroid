@@ -6,5 +6,4 @@ data class ProductModel(
     val img: String,
     val description: String,
     val ingredients: List<String>
-
 )
