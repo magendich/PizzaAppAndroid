@@ -4,7 +4,7 @@ import com.example.pizzaapp.data.model.ProductDto
 import com.example.pizzaapp.domain.model.ProductModel
 import javax.inject.Inject
 
-class ProductFromDtoToDomain @Inject constructor() {
+class ProductFromDtoToDomainMapper @Inject constructor() {
     operator fun invoke(productDto: ProductDto): ProductModel {
         with(productDto) {
             return ProductModel(

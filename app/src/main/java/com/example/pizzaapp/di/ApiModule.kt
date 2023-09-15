@@ -45,4 +45,9 @@ object ApiModule {
     fun provideApiService(retrofit: Retrofit): ApiRequestService {
         return retrofit.create(ApiRequestService::class.java)
     }
+
+//    @Provides
+//    fun provideAddressRepository(apiService: ApiRequestService): AddressRepositoryImpl {
+//        return AddressRepositoryImpl(apiService)
+//    }
 }

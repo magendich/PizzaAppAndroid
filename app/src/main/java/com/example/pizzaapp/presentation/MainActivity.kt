@@ -29,17 +29,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun fragmentNavigation() {
 
-        mainActivityUI.bottomNavigationView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.menuBN -> replaceFragment(CatalogFragment())
-                R.id.profileBN -> replaceFragment(ProfileFragment())
-                R.id.contactsBN -> replaceFragment(ContactsFragment())
-                R.id.cartBN -> replaceFragment(CartFragment())
+        mainActivityUI.bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.catalogBN -> replaceFragment(CatalogFragment.newInstance())
+                R.id.profileBN -> replaceFragment(ProfileFragment.newInstance())
+                R.id.contactsBN -> replaceFragment(ContactsFragment.newInstance())
+                R.id.cartBN -> replaceFragment(CartFragment.newInstance())
             }
             true
         }
     }
-
 
     private fun replaceFragment(fragment: Fragment) {
 

@@ -61,4 +61,13 @@ class CatalogFragment : BaseFragment() {
             productAdapter.submitList(pizzaList)
         }
     }
+
+    companion object {
+        @JvmStatic
+        fun newInstance(): CatalogFragment {
+            return CatalogFragment().apply {
+                arguments = Bundle()
+            }
+        }
+    }
 }

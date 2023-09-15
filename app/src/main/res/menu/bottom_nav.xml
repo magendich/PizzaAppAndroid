@@ -5,7 +5,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Меню"
-        android:id="@+id/menuBN"
+        android:id="@+id/catalogBN"
         android:icon="@drawable/baseline_local_pizza_24"/>
     <item
         android:layout_width="wrap_content"
