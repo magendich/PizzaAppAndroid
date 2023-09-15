@@ -15,7 +15,7 @@ class ProductAdapter: ListAdapter <ProductModel, ProductAdapter.PizzaViewHolder>
         fun bind(productModel: ProductModel) {
             pizzaUI.apply {
                 pizzaTitle.text = productModel.title
-                btnBuy.text = productModel.price + "р."
+                btnBuy.text = productModel.price + " р."
                 Picasso.get().load(productModel.img).into(pizzaImage)
                 pizzaDesc.text = productModel.description
                 pizzaIngredients.text = productModel.ingredients.joinToString(", ")

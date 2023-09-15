@@ -28,7 +28,7 @@
             android:layout_marginStart="8dp"
             android:text="Title"
             android:textColor="#595656"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/pizzaImage"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-light"
             android:text="Desc"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/pizzaTitle"
             app:layout_constraintTop_toBottomOf="@+id/pizzaTitle" />
@@ -48,7 +50,9 @@
             android:id="@+id/pizzaIngredients"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
             android:text="Ingredients"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/pizzaDesc"
             app:layout_constraintStart_toStartOf="@+id/pizzaDesc"
             app:layout_constraintTop_toBottomOf="@+id/pizzaDesc" />
