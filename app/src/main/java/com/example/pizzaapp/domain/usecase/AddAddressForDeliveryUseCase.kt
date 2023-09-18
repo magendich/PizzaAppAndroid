@@ -1,9 +1,9 @@
 package com.example.pizzaapp.domain.usecase
 
-import com.example.pizzaapp.domain.repository.AddressRepositoryImpl
+import com.example.pizzaapp.domain.repository.AddressRepository
 
 class AddAddressForDeliveryUseCase(
-    val addressRepositoryImpl: AddressRepositoryImpl
+    val addressRepository: AddressRepository
 ) {
     operator fun invoke() {
     }

@@ -1,6 +1,6 @@
 package com.example.pizzaapp.domain.model
 
-data class ProductModel(
+data class Product(
     val title: String,
     val price: String,
     val img: String,

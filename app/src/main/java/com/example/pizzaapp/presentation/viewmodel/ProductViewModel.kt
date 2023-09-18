@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pizzaapp.data.repository.ProductRepository
-import com.example.pizzaapp.domain.model.ProductModel
+import com.example.pizzaapp.domain.model.Product
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,8 +17,8 @@ class ProductViewModel @Inject constructor(
     private val productRepository: ProductRepository
 ): ViewModel() {
 
-    private val mutablePizzas = MutableLiveData<List<ProductModel>>()
-    val observablePizzas: LiveData<List<ProductModel>> = mutablePizzas
+    private val mutablePizzas = MutableLiveData<List<Product>>()
+    val observablePizzas: LiveData<List<Product>> = mutablePizzas
 
     fun fetchPizzas() {
         viewModelScope.launch {

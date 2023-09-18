@@ -6,19 +6,19 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pizzaapp.databinding.ItemCardLayoutBinding
-import com.example.pizzaapp.domain.model.ProductModel
+import com.example.pizzaapp.domain.model.Product
 import com.squareup.picasso.Picasso
 
-class ProductAdapter: ListAdapter <ProductModel, ProductAdapter.PizzaViewHolder>(PizzaDiffUtil()) {
+class ProductAdapter: ListAdapter <Product, ProductAdapter.PizzaViewHolder>(PizzaDiffUtil()) {
 
     class PizzaViewHolder(private val pizzaUI: ItemCardLayoutBinding): RecyclerView.ViewHolder(pizzaUI.root) {
-        fun bind(productModel: ProductModel) {
+        fun bind(product: Product) {
             pizzaUI.apply {
-                pizzaTitle.text = productModel.title
-                btnBuy.text = productModel.price + " р."
-                Picasso.get().load(productModel.img).into(pizzaImage)
-                pizzaDesc.text = productModel.description
-                pizzaIngredients.text = productModel.ingredients.joinToString(", ")
+                pizzaTitle.text = product.title
+                btnBuy.text = product.price + " р."
+                Picasso.get().load(product.img).into(pizzaImage)
+                pizzaDesc.text = product.description
+                pizzaIngredients.text = product.ingredients.joinToString(", ")
             }
         }
     }
@@ -36,12 +36,12 @@ class ProductAdapter: ListAdapter <ProductModel, ProductAdapter.PizzaViewHolder>
         holder.bind(getItem(position))
     }
 
-    class PizzaDiffUtil: DiffUtil.ItemCallback<ProductModel>() {
-        override fun areItemsTheSame(oldItem: ProductModel, newItem: ProductModel): Boolean {
+    class PizzaDiffUtil: DiffUtil.ItemCallback<Product>() {
+        override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem.title == newItem.title
         }
 
-        override fun areContentsTheSame(oldItem: ProductModel, newItem: ProductModel): Boolean {
+        override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem == newItem
         }
 

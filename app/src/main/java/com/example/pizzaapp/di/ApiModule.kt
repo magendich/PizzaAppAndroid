@@ -47,7 +47,7 @@ object ApiModule {
     }
 
 //    @Provides
-//    fun provideAddressRepository(apiService: ApiRequestService): AddressRepositoryImpl {
-//        return AddressRepositoryImpl(apiService)
+//    fun provideAddressRepository(apiService: ApiRequestService): AddressRepository {
+//        return AddressRepository(apiService)
 //    }
 }
