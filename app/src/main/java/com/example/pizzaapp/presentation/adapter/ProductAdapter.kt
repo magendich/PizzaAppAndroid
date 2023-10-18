@@ -44,6 +44,5 @@ class ProductAdapter: ListAdapter <Product, ProductAdapter.PizzaViewHolder>(Pizz
         override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem == newItem
         }
-
     }
 }

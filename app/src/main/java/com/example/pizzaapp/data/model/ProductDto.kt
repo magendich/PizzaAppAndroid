@@ -19,3 +19,6 @@ data class ProductDto(
     @SerializedName("ingridients")
     val ingredients: List<String>
 ): Serializable
+
+
+

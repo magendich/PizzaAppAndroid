@@ -40,7 +40,8 @@ class CatalogFragment : BaseFragment() {
         initViews()
         observe()
 
-        productViewModel.fetchPizzas()
+        productViewModel.fetchProducts()
+        productViewModel.observeProducts()
     }
 
     override fun onDestroy() {
